@@ -8,7 +8,7 @@
 
 try:
     import cx_Oracle
-except ImportError, cx_Oracle.DatabaseError:
+except Exception:  # not just ImportError here...
     cx_Oracle = None
 
 

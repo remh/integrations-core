@@ -34,14 +34,14 @@ export ORACLE_HOME=/opt/oracle/instantclient_12_1/
 export DYLD_LIBRARY_PATH="$ORACLE_HOME:$DYLD_LIBRARY_PATH"
 """
 
-CONFIG = """
-init_config:
-
-instances:
-    -   server: 127.0.0.1:8521
-        user: system
-        password: manager
-"""
+CONFIG = {
+    'init_config': {},
+    'instances': {
+        'server': '127.0.0.1:8521',
+        'user': 'system',
+        'password': 'manager',
+    }
+}
 
 @attr(requires='oracle')
 class TestOracle(AgentCheckTest):

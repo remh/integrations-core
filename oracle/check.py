@@ -3,14 +3,13 @@
 # Licensed under Simplified BSD License (see LICENSE)
 
 # stdlib
+from __future__ import print_function
 
 # 3rd party
-
 try:
     import cx_Oracle
 except Exception:  # not just ImportError here...
     cx_Oracle = None
-
 
 # project
 from checks import AgentCheck

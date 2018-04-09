@@ -3,7 +3,7 @@
         "agent_version": "5.2.0",
         "integration":"etcd",
         "check": "etcd.can_connect",
-        "statuses": ["ok", "critical"],
+        "statuses": ["ok", "critical", "unknown"],
         "groups": ["host", "url"],
         "name": "Can Connect",
         "description": "Returns `CRITICAL` if unable to get metrics from etcd (timeout or non-200 HTTP code)"
